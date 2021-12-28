@@ -26,6 +26,10 @@ if [[ -n "${RBENV_ROOT}" ]]; then
 
   echo "Installing bundler"
   gem install bundler
+
+  echo "installing rubocop"
+  gem install rubocop
+  curl -fsSL https://raw.githubusercontent.com/dyoung522/cookbooks/main/ruby/rubocop.yml -o ~/.rubocop.yml
 fi
 
 if [[ ! -f ~/.gitconfig ]]; then
