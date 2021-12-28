@@ -71,7 +71,7 @@ Vagrant.configure("2") do |config|
 
   # Install Ruby/Rails
   config.vm.provision "ruby", type: "shell", inline: <<-SHELL
-    apt-get install -y rbenv ruby-build ruby-dev
+    apt-get install -y rbenv ruby-dev
     gem install bundler rails
   SHELL
 
@@ -90,5 +90,5 @@ Vagrant.configure("2") do |config|
   config.vm.provision "Custom",
     type: "shell",
     privileged: false,
-    path: "https://raw.githubusercontent.com/dyoung522/cookbooks/main/vagrant/dev-install.sh"
+    path: "https://raw.githubusercontent.com/dyoung522/cookbooks/main/dev-install.sh"
 end
