@@ -6,6 +6,9 @@
     excludesfile = ~/.gitignore
     autocrlf = input
 
+[init]
+    defaultBranch = main
+
 [alias]
     lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
     st = status
