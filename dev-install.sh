@@ -37,6 +37,11 @@ if [[ ! -f ~/.gitconfig ]]; then
   curl -fsSL https://raw.githubusercontent.com/dyoung522/cookbooks/main/git/config -o ~/.gitconfig
 fi
 
+if [[ ! -f ~/.gitignore ]]; then
+  echo "Installing new .gitignore"
+  curl -fsSL https://raw.githubusercontent.com/dyoung522/cookbooks/main/git/ignore -o ~/.gitignore
+fi
+
 if [[ ! -d ~/.oh-my-zsh ]]; then
   if [[ -f ~/.zshrc ]]; then
     echo "Backing up existing .zshrc file"

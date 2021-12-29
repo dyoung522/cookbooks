@@ -1,0 +1,9 @@
+.vscode/
+.env.*
+.DS_Store
+/scratch
+scratch.*
+.ruby-version
+
+# Local files I don't care about
+node_modules
