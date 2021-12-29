@@ -9,7 +9,8 @@ export ZSH="${HOME}/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="minimal"
+#ZSH_THEME="minimal"
+ZSH_THEME="af-magic"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -85,10 +86,14 @@ set -o vi # vim keys
 
 alias vi="vim"
 
-export LESS="--quit-if-one-screen"
+export LESS="-RFX"
 export EDITOR="vim"
 export PAGER="cat"
 export SYSTEMD_PAGER=$PAGER
+export ZSH_DOTENV_PROMPT=false
+
+# rbenv setup
+if which rbenv >/dev/null; then eval "$(rbenv init -)"; fi
 
 # Read custom zshrc.local
 [ -e "$HOME/.zshrc.local" ] && source $HOME/.zshrc.local
